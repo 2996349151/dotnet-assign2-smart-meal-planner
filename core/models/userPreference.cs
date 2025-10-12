@@ -2,7 +2,7 @@
 // stores user settings
 // dietary requirements, allergies, preferred units, default planner days, favorite recipes
 
-namespace core.models
+namespace SmartMealPlanner
 {
     public class UserPreference
     {
