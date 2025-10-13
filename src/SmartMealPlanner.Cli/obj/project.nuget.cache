@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SJcJe22ETms=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\naonao\\Desktop\\dotnet-assign2-smart-meal-planner\\src\\SmartMealPlanner.Cli\\SmartMealPlanner.Cli.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\naonao\\.nuget\\packages\\system.text.json\\9.0.9\\system.text.json.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

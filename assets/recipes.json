@@ -1,0 +1,29 @@
+[
+  {
+    "Id": "r1",
+    "Title": "Tomato Pasta",
+    "ImageUrl": "",
+    "Ingredients": { "pasta": "200", "tomato": "2", "garlic": "2" },
+    "Steps": ["Boil pasta", "Saute garlic and tomato", "Combine"],
+    "Tags": ["italian","vegetarian"],
+    "CookTimeMins": 20
+  },
+  {
+    "Id": "r2",
+    "Title": "Chicken Fried Rice",
+    "ImageUrl": "",
+    "Ingredients": { "rice": "250", "chicken": "150", "egg": "2", "soy sauce": "1" },
+    "Steps": ["Prep", "Stir fry", "Season"],
+    "Tags": ["asian"],
+    "CookTimeMins": 18
+  },
+  {
+    "Id": "r3",
+    "Title": "Garlic Omelette",
+    "ImageUrl": "",
+    "Ingredients": { "egg": "3", "garlic": "1" },
+    "Steps": ["Beat eggs", "Cook with garlic"],
+    "Tags": ["vegetarian","breakfast"],
+    "CookTimeMins": 8
+  }
+]
