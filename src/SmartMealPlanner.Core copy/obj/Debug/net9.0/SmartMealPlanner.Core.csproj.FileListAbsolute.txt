@@ -1,0 +1,13 @@
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.csproj.AssemblyReference.cache
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.AssemblyInfoInputs.cache
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.AssemblyInfo.cs
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.csproj.CoreCompileInputs.cache
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.sourcelink.json
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\bin\Debug\net9.0\SmartMealPlanner.Core.deps.json
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\bin\Debug\net9.0\SmartMealPlanner.Core.dll
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\bin\Debug\net9.0\SmartMealPlanner.Core.pdb
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.dll
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\refint\SmartMealPlanner.Core.dll
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\SmartMealPlanner.Core.pdb
+C:\Users\naonao\Desktop\dotnet-assign2-smart-meal-planner\src\SmartMealPlanner.Core\obj\Debug\net9.0\ref\SmartMealPlanner.Core.dll
