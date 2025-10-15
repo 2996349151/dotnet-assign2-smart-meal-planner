@@ -1,42 +1,39 @@
-1) 领域与架构
+# Smart Meal Planner
 
-统一命名空间为 SmartMealPlanner.*，便于分层与引用一致。
+## 1) Domain & Architecture
 
-明确三层结构：Models / Repositories / Services，并保持最小可运行入口（若存在 Program.cs）。
+Unified namespace as `SmartMealPlanner.*` for consistent layering and references.
 
-2) 仓储层（Repositories）
+Clear three-layer structure: Models / Repositories / Services, maintaining a minimal runnable entry point (if Program.cs exists).
 
-定义并实现：
+## 2) Repository Layer (Repositories)
 
-IRecipeRepository / JsonRecipeRepository：从 assets/recipes.json 读入食谱数据。
+Define and implement:
 
-IPantryRepository / JsonPantryRepository：读写 assets/pantry.json，提供持久化。
+**IRecipeRepository / JsonRecipeRepository**: Read recipe data from `assets/recipes.json`.
 
-容错 JSON 映射：对缺失字段、大小写差异、数值/字符串单位（如 “200g”/“200”）做宽松处理，提升数据兼容性。
+**IPantryRepository / JsonPantryRepository**: Read/write `assets/pantry.json`, providing persistence.
 
-3) 服务层（Services）
+**Fault-tolerant JSON mapping**: Handle missing fields, case differences, and numeric/string units (e.g., "200g"/"200") with lenient processing to improve data compatibility.
 
-RecipeService：
+## 3) Service Layer (Services)
 
-关键词搜索（标题/标签/食材），按 ID 获取。
+**RecipeService**:
+- Keyword search (title/tags/ingredients), retrieval by ID
+- Favorites functionality: Read/write `assets/favorites.json`, providing Add/Remove/Get favorites interface
 
-收藏功能：读写 assets/favorites.json，提供 Add/Remove/Get 收藏接口。
+**PantryService**:
+- Provide GetAll, GetById, GetByTitle, Add/Update/Delete, HasIngredient and other common capabilities
+- Use reflection-based mapping to reduce code intrusion from field changes (smaller changes when fields are added/renamed)
 
-PantryService：
+## 4) Data Assets (assets)
 
-提供 GetAll、GetById、GetByTitle、Add/Update/Delete、HasIngredient 等常用能力。
+Update and standardize local data:
 
-采用反射型映射减少字段变动对代码的侵入性（字段新增/重命名时改动更小）。
+**assets/recipes.json**: Replace with minimal runnable examples - three dishes (Tomato Pasta, Chicken Fried Rice, Garlic Fried Eggs), simplified fields and steps, ImageUrl can be null.
 
-4) 数据资产（assets）
+**assets/pantry.json**: Unified key names and quantity representation (e.g., pasta: 300, egg: 12, soy_sauce: 5), removing ambiguity and plural forms.
 
-更新与规范化本地数据：
+**assets/favorites.json**: Favorites persistence file (maintained by RecipeService).
 
-assets/recipes.json：用最小可运行示例替换，三道菜（番茄意面、鸡肉炒饭、蒜香煎蛋），精简字段与步骤，ImageUrl 允许为空。
-
-assets/pantry.json：统一键名与数量表示（如 pasta: 300、egg: 12、soy_sauce: 5），去除歧义与复数形式。
-
-
-assets/favorites.json：作为收藏持久化文件（由 RecipeService 维护）。
-
-键名与单位策略：倾向小写+下划线/无空格的键名；数量尽量使用纯数值，便于比较与运算。
+**Key naming and unit strategy**: Prefer lowercase + underscore/no spaces for key names; quantities should use pure numeric values when possible for easier comparison and calculation.
