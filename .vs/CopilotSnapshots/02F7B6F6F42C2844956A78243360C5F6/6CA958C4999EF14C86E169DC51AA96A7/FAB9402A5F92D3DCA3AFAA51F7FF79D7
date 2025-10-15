@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows.Forms;
+using SmartMealPlanner.Core.Models;
+using SmartMealPlanner.Core.Services;
+using SmartMealPlanner.Core.Interfaces;
+
+namespace SmartMealPlanner.UI;
+
+public class IngredientManagementForm : Form
+{
+    private IPantryService _pantryService;
+    private Pantry _pantry;
+    private BindingList<Ingredient> _ingredientsBindingList;
+
+    public IngredientManagementForm(IPantryService pantryService)
+    {
+        InitializeComponent();
+        _pantryService = pantryService;
+    }
+
+    private void IngredientManagementForm_Load(object sender, EventArgs e)
+    {
+        LoadPantry();
+    }
+
+    private void LoadPantry()
+    {
+        _pantry = _pantryService.GetAsync().GetAwaiter().GetResult();
+        _ingredientsBindingList = new BindingList<Ingredient>(
+            _pantry.Items
+                .Select(kvp => new Ingredient(0, kvp.Key, kvp.Value, ""))
+                .ToList()
+        );
+        dataGridViewIngredients.DataSource = _ingredientsBindingList;
+
+        dataGridViewIngredients.Columns["Title"].ReadOnly = true;
+        dataGridViewIngredients.Columns["Quantity"].ReadOnly = false;
+    }
+
+    private void buttonSave_Click(object sender, EventArgs e)
+    {
+        SaveChanges();
+    }
+
+    private void SaveChanges()
+    {
+        _pantry.Items.Clear();
+        foreach (var ingredient in _ingredientsBindingList)
+        {
+            if (!string.IsNullOrWhiteSpace(ingredient.Title))
+            {
+                _pantry.Items[ingredient.Title] = ingredient.Quantity;
+            }
+        }
+
+        _pantryService.SaveAsync(_pantry).GetAwaiter().GetResult();
+        MessageBox.Show("Pantry saved successfully.");
+    }
+
+    private void buttonAdd_Click(object sender, EventArgs e)
+    {
+        _ingredientsBindingList.Add(new Ingredient(0, "New Ingredient", 0, ""));
+    }
+
+    private void buttonDelete_Click(object sender, EventArgs e)
+    {
+        if (dataGridViewIngredients.CurrentRow != null)
+        {
+            var ingredient = dataGridViewIngredients.CurrentRow.DataBoundItem as Ingredient;
+            if (ingredient != null)
+            {
+                _ingredientsBindingList.Remove(ingredient);
+            }
+        }
+    }
+}

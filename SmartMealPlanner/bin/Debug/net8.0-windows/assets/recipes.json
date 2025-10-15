@@ -1,0 +1,277 @@
+[
+  {
+    "Id": "r1",
+    "Title": "Classic Omelette",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Eggs": "2",
+      "Milk": "0.1",
+      "Butter": "0.05"
+    },
+    "Steps": [ "Beat eggs with milk.", "Melt butter in pan.", "Cook eggs until set." ],
+    "Tags": [ "breakfast", "vegetarian" ],
+    "CookTimeMins": 10
+  },
+  {
+    "Id": "r2",
+    "Title": "Chicken Rice Bowl",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Chicken Breast": "1",
+      "Rice": "150",
+      "Broccoli": "0.5"
+    },
+    "Steps": [ "Cook rice.", "Grill chicken.", "Steam broccoli.", "Combine all." ],
+    "Tags": [ "lunch", "high-protein" ],
+    "CookTimeMins": 30
+  },
+  {
+    "Id": "r3",
+    "Title": "Vegetable Pasta",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Pasta": "100",
+      "Tomato": "2",
+      "Bell Pepper": "1",
+      "Onion": "0.5"
+    },
+    "Steps": [ "Boil pasta.", "Saute vegetables.", "Mix together." ],
+    "Tags": [ "dinner", "vegetarian" ],
+    "CookTimeMins": 25
+  },
+  {
+    "Id": "r4",
+    "Title": "Fruit Yogurt Parfait",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Yogurt": "0.2",
+      "Strawberry": "5",
+      "Banana": "1",
+      "Honey": "0.02"
+    },
+    "Steps": [ "Slice fruit.", "Layer with yogurt.", "Drizzle honey." ],
+    "Tags": [ "snack", "vegetarian", "dessert" ],
+    "CookTimeMins": 5
+  },
+  {
+    "Id": "r5",
+    "Title": "Grilled Salmon Salad",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Salmon": "1",
+      "Lettuce": "0.5",
+      "Cucumber": "0.5",
+      "Olive Oil": "0.02"
+    },
+    "Steps": [ "Grill salmon.", "Chop veggies.", "Mix and dress." ],
+    "Tags": [ "dinner", "pescatarian" ],
+    "CookTimeMins": 20
+  },
+  {
+    "Id": "r6",
+    "Title": "Beef Stew",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Beef": "0.5",
+      "Potato": "2",
+      "Carrot": "1",
+      "Onion": "0.5"
+    },
+    "Steps": [ "Brown beef.", "Add veggies.", "Simmer until tender." ],
+    "Tags": [ "dinner", "high-protein" ],
+    "CookTimeMins": 60
+  },
+  {
+    "Id": "r7",
+    "Title": "Oatmeal Bowl",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Oats": "50",
+      "Milk": "0.2",
+      "Banana": "1",
+      "Almonds": "10"
+    },
+    "Steps": [ "Cook oats with milk.", "Top with banana and almonds." ],
+    "Tags": [ "breakfast", "vegetarian" ],
+    "CookTimeMins": 10
+  },
+  {
+    "Id": "r8",
+    "Title": "Tuna Sandwich",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Tuna": "1",
+      "Bread": "2",
+      "Lettuce": "0.2",
+      "Onion": "0.1"
+    },
+    "Steps": [ "Mix tuna with onion.", "Layer on bread with lettuce." ],
+    "Tags": [ "lunch", "pescatarian" ],
+    "CookTimeMins": 10
+  },
+  {
+    "Id": "r9",
+    "Title": "Vegetable Stir Fry",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Broccoli": "1",
+      "Carrot": "1",
+      "Bell Pepper": "1",
+      "Olive Oil": "0.02"
+    },
+    "Steps": [ "Chop veggies.", "Stir fry in oil." ],
+    "Tags": [ "dinner", "vegan" ],
+    "CookTimeMins": 15
+  },
+  {
+    "Id": "r10",
+    "Title": "Egg Salad",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Eggs": "2",
+      "Lettuce": "0.2",
+      "Cucumber": "0.2",
+      "Onion": "0.1"
+    },
+    "Steps": [ "Boil eggs.", "Chop veggies.", "Mix together." ],
+    "Tags": [ "lunch", "vegetarian" ],
+    "CookTimeMins": 15
+  },
+  {
+    "Id": "r11",
+    "Title": "Chicken Wrap",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Chicken Breast": "1",
+      "Lettuce": "0.2",
+      "Tomato": "1",
+      "Bread": "1"
+    },
+    "Steps": [ "Cook chicken.", "Wrap with veggies in bread." ],
+    "Tags": [ "lunch", "high-protein" ],
+    "CookTimeMins": 20
+  },
+  {
+    "Id": "r12",
+    "Title": "Garlic Butter Mushrooms",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Mushroom": "5",
+      "Garlic": "1",
+      "Butter": "0.05"
+    },
+    "Steps": [ "Slice mushrooms.", "Saute with garlic and butter." ],
+    "Tags": [ "snack", "vegetarian" ],
+    "CookTimeMins": 10
+  },
+  {
+    "Id": "r13",
+    "Title": "Potato Corn Chowder",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Potato": "2",
+      "Corn": "1",
+      "Milk": "0.2",
+      "Butter": "0.05"
+    },
+    "Steps": [ "Boil potatoes.", "Add corn and milk.", "Simmer with butter." ],
+    "Tags": [ "dinner", "vegetarian" ],
+    "CookTimeMins": 30
+  },
+  {
+    "Id": "r14",
+    "Title": "Spinach Cheese Omelette",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Eggs": "2",
+      "Spinach": "0.2",
+      "Cheese": "0.05"
+    },
+    "Steps": [ "Beat eggs.", "Add spinach and cheese.", "Cook in pan." ],
+    "Tags": [ "breakfast", "vegetarian" ],
+    "CookTimeMins": 10
+  },
+  {
+    "Id": "r15",
+    "Title": "Almond Banana Smoothie",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Banana": "1",
+      "Milk": "0.2",
+      "Almonds": "10",
+      "Honey": "0.01"
+    },
+    "Steps": [ "Blend all ingredients." ],
+    "Tags": [ "snack", "vegetarian", "drink" ],
+    "CookTimeMins": 5
+  },
+  {
+    "Id": "r16",
+    "Title": "Walnut Apple Salad",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Apple": "1",
+      "Walnuts": "10",
+      "Lettuce": "0.2",
+      "Yogurt": "0.1"
+    },
+    "Steps": [ "Chop apple.", "Mix with walnuts and lettuce.", "Dress with yogurt." ],
+    "Tags": [ "lunch", "vegetarian" ],
+    "CookTimeMins": 10
+  },
+  {
+    "Id": "r17",
+    "Title": "Orange Strawberry Bowl",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Orange": "1",
+      "Strawberry": "5",
+      "Yogurt": "0.1"
+    },
+    "Steps": [ "Slice fruit.", "Mix with yogurt." ],
+    "Tags": [ "snack", "vegetarian", "dessert" ],
+    "CookTimeMins": 5
+  },
+  {
+    "Id": "r18",
+    "Title": "Broccoli Cheese Bake",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Broccoli": "1",
+      "Cheese": "0.1",
+      "Eggs": "1",
+      "Milk": "0.1"
+    },
+    "Steps": [ "Mix all ingredients.", "Bake until set." ],
+    "Tags": [ "dinner", "vegetarian" ],
+    "CookTimeMins": 30
+  },
+  {
+    "Id": "r19",
+    "Title": "Carrot Pea Pilaf",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Rice": "100",
+      "Carrot": "1",
+      "Peas": "0.5",
+      "Onion": "0.2"
+    },
+    "Steps": [ "Cook rice.", "Saute veggies.", "Mix together." ],
+    "Tags": [ "lunch", "vegan" ],
+    "CookTimeMins": 25
+  },
+  {
+    "Id": "r20",
+    "Title": "Tomato Cucumber Salad",
+    "ImageUrl": "",
+    "Ingredients": {
+      "Tomato": "2",
+      "Cucumber": "1",
+      "Onion": "0.1",
+      "Olive Oil": "0.01"
+    },
+    "Steps": [ "Chop veggies.", "Dress with olive oil." ],
+    "Tags": [ "snack", "vegan" ],
+    "CookTimeMins": 5
+  }
+]
