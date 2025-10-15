@@ -9,6 +9,7 @@ namespace SmartMealPlanner.Core.Services
 
         public RecipeService(IRecipeRepository repo) { _repo = repo; }
 
+        // Search recipes by keyword in title, tags, or ingredients.
         public async Task<IReadOnlyList<Recipe>> SearchAsync(string keyword)
         {
             var k = (keyword ?? "").Trim().ToLowerInvariant();
@@ -24,6 +25,7 @@ namespace SmartMealPlanner.Core.Services
 
         public Task<Recipe> GetByIdAsync(string id) { return _repo.GetByIdAsync(id); }
 
+        // Get recipe recommendations based on pantry contents and user preferences.
         public async Task<IReadOnlyList<Recipe>> GetRecommendationsAsync(Pantry pantry, UserPreference pref, int tolerance)
         {
             var all = await _repo.GetAllAsync();
@@ -32,6 +34,7 @@ namespace SmartMealPlanner.Core.Services
                 pmap[Normalize(kv.Key)] = kv.Value;
             var tol = Math.Max(0, tolerance);
 
+            // Weigh cuisine tags based on user preferences.
             double CuisineWeight(Recipe r)
             {
                 double sum = 0;
@@ -44,6 +47,7 @@ namespace SmartMealPlanner.Core.Services
                 return sum;
             }
 
+            // Check if recipe contains any disliked ingredients.
             bool IsDisliked(Recipe r)
             {
                 foreach (var n in r.Ingredients.Keys)
@@ -51,6 +55,7 @@ namespace SmartMealPlanner.Core.Services
                 return false;
             }
 
+            // Check if recipe matches user's dietary tags.
             bool DietOk(Recipe r)
             {
                 if (pref.DietTags.Count == 0) return true;
@@ -66,6 +71,7 @@ namespace SmartMealPlanner.Core.Services
                 int missing = 0;
                 double missingDeficit = 0;
 
+                // Count missing ingredients
                 foreach (var kvp in r.Ingredients)
                 {
                     var name = kvp.Key;
@@ -83,19 +89,18 @@ namespace SmartMealPlanner.Core.Services
 
                 if (missing > tol) continue;
 
+                // Score the recipe
                 double score = 1.0;
                 score += CuisineWeight(r);
                 if (DietOk(r)) score += 0.3;
                 if (IsDisliked(r)) score -= 0.8;
                 score -= missing * 0.2;
-                score -= Math.Min(Math.Max(r.CookTimeMins / 120.0, 0), 1) * 0.3; // prefer quicker
-
-                // small tie-breaker by deficit
+                score -= Math.Min(Math.Max(r.CookTimeMins / 120.0, 0), 1) * 0.3; 
                 score -= Math.Min(missingDeficit / 10.0, 1.0) * 0.2;
-
                 accepted.Add(Tuple.Create(r, missing, score));
             }
 
+            // Sort by score descending, then by cook time ascending
             return accepted
                 .OrderByDescending(x => x.Item3)
                 .ThenBy(x => x.Item1.CookTimeMins)
@@ -105,13 +110,13 @@ namespace SmartMealPlanner.Core.Services
 
         private static string Normalize(string s) { return (s ?? "").Trim().ToLowerInvariant(); }
 
+        // Parse a quantity string to a double, ignoring non-numeric characters.
         private static double ParseQty(string s)
         {
             if (string.IsNullOrWhiteSpace(s)) return 0;
             double v;
             if (double.TryParse(s.Trim(), System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out v)) return v;
-            // fallback: strip non-digits except dot
             var filtered = new string(s.ToCharArray().Where(ch => char.IsDigit(ch) || ch == '.' || ch == '-').ToArray());
             return double.TryParse(filtered, System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out v) ? v : 0;

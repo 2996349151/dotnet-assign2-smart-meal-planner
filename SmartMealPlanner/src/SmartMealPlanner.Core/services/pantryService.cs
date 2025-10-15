@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
 using SmartMealPlanner.Core.Interfaces;
 using SmartMealPlanner.Core.Models;
 
@@ -17,12 +13,12 @@ namespace SmartMealPlanner.Core.Services
 
         public Task SaveAsync(Pantry pantry) { return _repo.SaveAsync(pantry); }
 
+        // Apply a recipe to the pantry, reducing ingredient quantities accordingly.
         public async Task ApplyCookingAsync(Recipe recipe)
         {
             var pantry = await _repo.GetAsync();
             var items = pantry.Items;
 
-            // 1) Validate
             foreach (var kvp in recipe.Ingredients)
             {
                 var name = kvp.Key;
@@ -30,11 +26,12 @@ namespace SmartMealPlanner.Core.Services
                 var key = Normalize(name);
                 var need = ParseQty(qtyStr);
                 var have = items.ContainsKey(key) ? items[key] : 0.0;
+
                 if (have + 1e-9 < need)
                     throw new InvalidOperationException($"Not enough '{name}': need {need}, have {have}");
             }
 
-            // 2) Deduct
+            // Deduct the used ingredients
             foreach (var kvp in recipe.Ingredients)
             {
                 var name = kvp.Key;
@@ -49,6 +46,7 @@ namespace SmartMealPlanner.Core.Services
 
         private static string Normalize(string s) { return (s ?? "").Trim().ToLowerInvariant(); }
 
+        // Parse a quantity string to a double, ignoring non-numeric characters.
         private static double ParseQty(string s)
         {
             if (string.IsNullOrWhiteSpace(s)) return 0;

@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SmartMealPlanner.Core.Models
 {
     public sealed class UserPreference

@@ -4,9 +4,9 @@
     "Title": "Classic Omelette",
     "ImageUrl": "assets/recipePictures/classic_omelette.jpg",
     "Ingredients": {
-      "Eggs": "2",
-      "Milk": "0.1",
-      "Butter": "0.05"
+      "eggs": "2",
+      "milk (l)": "0.1",
+      "butter": "0.05"
     },
     "Steps": [ "Beat eggs with milk.", "Melt butter in pan.", "Cook eggs until set." ],
     "Tags": [ "breakfast", "vegetarian" ],
@@ -17,9 +17,9 @@
     "Title": "Chicken Rice Bowl",
     "ImageUrl": "assets/recipePictures/chicken_rice_bowl.jpg",
     "Ingredients": {
-      "Chicken Breast": "1",
-      "Rice": "150",
-      "Broccoli": "0.5"
+      "chicken breast": "1",
+      "rice (g)": "150",
+      "broccoli": "0.5"
     },
     "Steps": [ "Cook rice.", "Grill chicken.", "Steam broccoli.", "Combine all." ],
     "Tags": [ "lunch", "high-protein" ],
@@ -30,10 +30,10 @@
     "Title": "Vegetable Pasta",
     "ImageUrl": "assets/recipePictures/vegetable_pasta.jpg",
     "Ingredients": {
-      "Pasta": "100",
-      "Tomato": "2",
-      "Bell Pepper": "1",
-      "Onion": "0.5"
+      "pasta (g)": "100",
+      "tomato": "2",
+      "bell pepper": "1",
+      "onion": "0.5"
     },
     "Steps": [ "Boil pasta.", "Saute vegetables.", "Mix together." ],
     "Tags": [ "dinner", "vegetarian" ],
@@ -44,10 +44,10 @@
     "Title": "Fruit Yogurt Parfait",
     "ImageUrl": "assets/recipePictures/fruit_yogurt_parfait.jpg",
     "Ingredients": {
-      "Yogurt": "0.2",
-      "Strawberry": "5",
-      "Banana": "1",
-      "Honey": "0.02"
+      "yogurt": "0.2",
+      "strawberry": "5",
+      "banana": "1",
+      "honey (g)": "0.02"
     },
     "Steps": [ "Slice fruit.", "Layer with yogurt.", "Drizzle honey." ],
     "Tags": [ "snack", "vegetarian", "dessert" ],
@@ -58,10 +58,10 @@
     "Title": "Grilled Salmon Salad",
     "ImageUrl": "assets/recipePictures/grilled_salmon_salad.jpg",
     "Ingredients": {
-      "Salmon": "1",
-      "Lettuce": "0.5",
-      "Cucumber": "0.5",
-      "Olive Oil": "0.02"
+      "salmon": "1",
+      "lettuce": "0.5",
+      "cucumber": "0.5",
+      "olive oil (ml)": "0.02"
     },
     "Steps": [ "Grill salmon.", "Chop veggies.", "Mix and dress." ],
     "Tags": [ "dinner", "pescatarian" ],
@@ -72,10 +72,10 @@
     "Title": "Beef Stew",
     "ImageUrl": "assets/recipePictures/beef_stew.jpg",
     "Ingredients": {
-      "Beef": "0.5",
-      "Potato": "2",
-      "Carrot": "1",
-      "Onion": "0.5"
+      "beef (g)": "0.5",
+      "potato": "2",
+      "carrot": "1",
+      "onion": "0.5"
     },
     "Steps": [ "Brown beef.", "Add veggies.", "Simmer until tender." ],
     "Tags": [ "dinner", "high-protein" ],
@@ -86,10 +86,10 @@
     "Title": "Oatmeal Bowl",
     "ImageUrl": "assets/recipePictures/oatmeal_bowl.jpg",
     "Ingredients": {
-      "Oats": "50",
-      "Milk": "0.2",
-      "Banana": "1",
-      "Almonds": "10"
+      "oats": "50",
+      "milk (l)": "0.2",
+      "banana": "1",
+      "almonds": "10"
     },
     "Steps": [ "Cook oats with milk.", "Top with banana and almonds." ],
     "Tags": [ "breakfast", "vegetarian" ],
@@ -100,10 +100,10 @@
     "Title": "Tuna Sandwich",
     "ImageUrl": "assets/recipePictures/tuna_sandwich.jpg",
     "Ingredients": {
-      "Tuna": "1",
-      "Bread": "2",
-      "Lettuce": "0.2",
-      "Onion": "0.1"
+      "tuna": "1",
+      "bread": "2",
+      "lettuce": "0.2",
+      "onion": "0.1"
     },
     "Steps": [ "Mix tuna with onion.", "Layer on bread with lettuce." ],
     "Tags": [ "lunch", "pescatarian" ],
@@ -114,10 +114,10 @@
     "Title": "Vegetable Stir Fry",
     "ImageUrl": "assets/recipePictures/vegetable_stir_fry.jpg",
     "Ingredients": {
-      "Broccoli": "1",
-      "Carrot": "1",
-      "Bell Pepper": "1",
-      "Olive Oil": "0.02"
+      "broccoli": "1",
+      "carrot": "1",
+      "bell pepper": "1",
+      "olive oil (ml)": "0.02"
     },
     "Steps": [ "Chop veggies.", "Stir fry in oil." ],
     "Tags": [ "dinner", "vegan" ],
@@ -128,10 +128,10 @@
     "Title": "Egg Salad",
     "ImageUrl": "assets/recipePictures/egg_salad.jpg",
     "Ingredients": {
-      "Eggs": "2",
-      "Lettuce": "0.2",
-      "Cucumber": "0.2",
-      "Onion": "0.1"
+      "eggs": "2",
+      "lettuce": "0.2",
+      "cucumber": "0.2",
+      "onion": "0.1"
     },
     "Steps": [ "Boil eggs.", "Chop veggies.", "Mix together." ],
     "Tags": [ "lunch", "vegetarian" ],
@@ -142,10 +142,10 @@
     "Title": "Chicken Wrap",
     "ImageUrl": "assets/recipePictures/chicken_wrap.jpg",
     "Ingredients": {
-      "Chicken Breast": "1",
-      "Lettuce": "0.2",
-      "Tomato": "1",
-      "Bread": "1"
+      "chicken breast": "1",
+      "lettuce": "0.2",
+      "tomato": "1",
+      "bread": "1"
     },
     "Steps": [ "Cook chicken.", "Wrap with veggies in bread." ],
     "Tags": [ "lunch", "high-protein" ],
@@ -156,9 +156,9 @@
     "Title": "Garlic Butter Mushrooms",
     "ImageUrl": "assets/recipePictures/garlic_butter_mushrooms.jpg",
     "Ingredients": {
-      "Mushroom": "5",
-      "Garlic": "1",
-      "Butter": "0.05"
+      "mushroom": "5",
+      "garlic": "1",
+      "butter": "0.05"
     },
     "Steps": [ "Slice mushrooms.", "Saute with garlic and butter." ],
     "Tags": [ "snack", "vegetarian" ],
@@ -169,10 +169,10 @@
     "Title": "Potato Corn Chowder",
     "ImageUrl": "assets/recipePictures/potato_corn_chowder.jpg",
     "Ingredients": {
-      "Potato": "2",
-      "Corn": "1",
-      "Milk": "0.2",
-      "Butter": "0.05"
+      "potato": "2",
+      "corn": "1",
+      "milk (l)": "0.2",
+      "butter": "0.05"
     },
     "Steps": [ "Boil potatoes.", "Add corn and milk.", "Simmer with butter." ],
     "Tags": [ "dinner", "vegetarian" ],
@@ -183,9 +183,9 @@
     "Title": "Spinach Cheese Omelette",
     "ImageUrl": "assets/recipePictures/spinach_cheese_omelette.jpg",
     "Ingredients": {
-      "Eggs": "2",
-      "Spinach": "0.2",
-      "Cheese": "0.05"
+      "eggs": "2",
+      "spinach (g)": "0.2",
+      "cheese (g)": "0.05"
     },
     "Steps": [ "Beat eggs.", "Add spinach and cheese.", "Cook in pan." ],
     "Tags": [ "breakfast", "vegetarian" ],
@@ -196,10 +196,10 @@
     "Title": "Almond Banana Smoothie",
     "ImageUrl": "assets/recipePictures/almond_banana_smoothie.jpg",
     "Ingredients": {
-      "Banana": "1",
-      "Milk": "0.2",
-      "Almonds": "10",
-      "Honey": "0.01"
+      "banana": "1",
+      "milk (l)": "0.2",
+      "almonds": "10",
+      "honey (g)": "0.01"
     },
     "Steps": [ "Blend all ingredients." ],
     "Tags": [ "snack", "vegetarian", "drink" ],
@@ -210,10 +210,10 @@
     "Title": "Walnut Apple Salad",
     "ImageUrl": "assets/recipePictures/walnut_apple_salad.jpg",
     "Ingredients": {
-      "Apple": "1",
-      "Walnuts": "10",
-      "Lettuce": "0.2",
-      "Yogurt": "0.1"
+      "apple": "1",
+      "walnuts": "10",
+      "lettuce": "0.2",
+      "yogurt": "0.1"
     },
     "Steps": [ "Chop apple.", "Mix with walnuts and lettuce.", "Dress with yogurt." ],
     "Tags": [ "lunch", "vegetarian" ],
@@ -224,9 +224,9 @@
     "Title": "Orange Strawberry Bowl",
     "ImageUrl": "assets/recipePictures/orange_strawberry_bowl.jpg",
     "Ingredients": {
-      "Orange": "1",
-      "Strawberry": "5",
-      "Yogurt": "0.1"
+      "orange": "1",
+      "strawberry": "5",
+      "yogurt": "0.1"
     },
     "Steps": [ "Slice fruit.", "Mix with yogurt." ],
     "Tags": [ "snack", "vegetarian", "dessert" ],
@@ -237,10 +237,10 @@
     "Title": "Broccoli Cheese Bake",
     "ImageUrl": "assets/recipePictures/broccoli_cheese_bake.jpg",
     "Ingredients": {
-      "Broccoli": "1",
-      "Cheese": "0.1",
-      "Eggs": "1",
-      "Milk": "0.1"
+      "broccoli": "1",
+      "cheese (g)": "0.1",
+      "eggs": "1",
+      "milk (l)": "0.1"
     },
     "Steps": [ "Mix all ingredients.", "Bake until set." ],
     "Tags": [ "dinner", "vegetarian" ],
@@ -251,10 +251,10 @@
     "Title": "Carrot Pea Pilaf",
     "ImageUrl": "assets/recipePictures/carrot_pea_pilaf.jpg",
     "Ingredients": {
-      "Rice": "100",
-      "Carrot": "1",
-      "Peas": "0.5",
-      "Onion": "0.2"
+      "rice (g)": "100",
+      "carrot": "1",
+      "peas": "0.5",
+      "onion": "0.2"
     },
     "Steps": [ "Cook rice.", "Saute veggies.", "Mix together." ],
     "Tags": [ "lunch", "vegan" ],
@@ -265,10 +265,10 @@
     "Title": "Tomato Cucumber Salad",
     "ImageUrl": "assets/recipePictures/tomato_cucumber_salad.jpg",
     "Ingredients": {
-      "Tomato": "2",
-      "Cucumber": "1",
-      "Onion": "0.1",
-      "Olive Oil": "0.01"
+      "tomato": "2",
+      "cucumber": "1",
+      "onion": "0.1",
+      "olive oil (ml)": "0.01"
     },
     "Steps": [ "Chop veggies.", "Dress with olive oil." ],
     "Tags": [ "snack", "vegan" ],

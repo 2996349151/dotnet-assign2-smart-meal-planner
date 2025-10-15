@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using SmartMealPlanner.Core.Models;
 
 namespace SmartMealPlanner.Core.Interfaces

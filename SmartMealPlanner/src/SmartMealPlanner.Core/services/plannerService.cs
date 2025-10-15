@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using SmartMealPlanner.Core.Interfaces;
 using SmartMealPlanner.Core.Models;
 
@@ -10,9 +7,10 @@ namespace SmartMealPlanner.Core.Services
     {
         private readonly Dictionary<DateTime, Dictionary<MealType, Recipe>> _plan = new Dictionary<DateTime, Dictionary<MealType, Recipe>>();
 
+        // Generates a meal plan for the specified number of days starting from today.
         public Task<IDictionary<DateTime, Dictionary<MealType, Recipe>>> GenerateAsync(int days)
         {
-            _plan.Clear(); // Clear previous plan to respect the requested days
+            _plan.Clear();
             var start = DateTime.Today;
             for (int i = 0; i < Math.Max(1, days); i++)
             {
@@ -28,6 +26,7 @@ namespace SmartMealPlanner.Core.Services
             return Task.FromResult((IDictionary<DateTime, Dictionary<MealType, Recipe>>)_plan);
         }
 
+        // Assigns a specific recipe to a meal on a given date in the meal plan.
         public Task AssignAsync(DateTime date, MealType meal, Recipe recipe)
         {
             if (!_plan.ContainsKey(date))
@@ -42,6 +41,11 @@ namespace SmartMealPlanner.Core.Services
             }
             _plan[date][meal] = recipe;
             return Task.CompletedTask;
+        }
+
+        public IDictionary<DateTime, Dictionary<MealType, Recipe>> GetCurrentPlan()
+        {
+            return _plan;
         }
     }
 }

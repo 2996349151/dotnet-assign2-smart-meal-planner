@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using SmartMealPlanner.Core.Interfaces;
 using SmartMealPlanner.Core.Models;
 
@@ -11,8 +6,6 @@ namespace SmartMealPlanner.Core.Data.Repositories
     public sealed class JsonRecipeRepository : IRecipeRepository
     {
         private readonly string _jsonPath;
-        // NOTE: System.Text.Json is not available in .NET Framework 4.8.1. You may need to use Newtonsoft.Json instead.
-        // private readonly JsonSerializerOptions _opt = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
         public JsonRecipeRepository(string jsonPath) => _jsonPath = jsonPath;
 

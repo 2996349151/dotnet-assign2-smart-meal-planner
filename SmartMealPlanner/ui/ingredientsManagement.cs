@@ -53,9 +53,9 @@ namespace SmartMealPlanner.UI
             labelInstructions.Location = new Point(12, 8);
             labelInstructions.Name = "labelInstructions";
             labelInstructions.Size = new Size(800, 60);
-            labelInstructions.Text = "Welcome to the ingredient management page!\n" +
-                "You can add, remove, edit available ingredients here.\n" +
-                "Remember to save any changes!";
+            labelInstructions.Text = "Welcome to the Ingredient Management Page!\n" +
+                "1. You can add, remove, edit available ingredients here.\n" +
+                "2. Remember to save any changes!";
             // 
             // dataGridViewIngredients
             // 

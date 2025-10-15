@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using SmartMealPlanner.Core.Models;
 
 namespace SmartMealPlanner.Core.Interfaces
@@ -7,6 +6,6 @@ namespace SmartMealPlanner.Core.Interfaces
     {
         Task<Pantry> GetAsync();
         Task SaveAsync(Pantry pantry);
-        Task ApplyCookingAsync(Recipe recipe); // throws if insufficient
+        Task ApplyCookingAsync(Recipe recipe);
     }
 }

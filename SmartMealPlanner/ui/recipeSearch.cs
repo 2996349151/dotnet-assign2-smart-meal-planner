@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using SmartMealPlanner.Core.Services;
 using SmartMealPlanner.Core.Models;
 using SmartMealPlanner.Core.Data.Repositories;
@@ -31,23 +26,38 @@ namespace SmartMealPlanner.UI
             LoadRecipesAsync();
         }
 
+        // Build the UI components
         private void BuildUI()
         {
             this.Text = "Recipe Search";
             this.Width = 700;
             this.Height = 500;
 
-            searchBox = new TextBox { Left = 10, Top = 10, Width = 300 };
-            filterCombo = new ComboBox { Left = 320, Top = 10, Width = 150, DropDownStyle = ComboBoxStyle.DropDownList };
-            searchBtn = new Button { Left = 480, Top = 10, Width = 80, Text = "Search" };
+            // Three-line instruction label
+            var lblInstructions = new Label
+            {
+                Left = 10,
+                Top = 10,
+                Width = 650,
+                Height = 60,
+                Text = "Welcome to the Recipe Search Page!\n" +
+                       "1. Enter keywords or select a tag to filter recipes.\n" +
+                       "2. Double-click a recipe to view its details."
+            };
+
+            // Search box, filter combo, and search button
+            searchBox = new TextBox { Left = 10, Top = 80, Width = 300 };
+            filterCombo = new ComboBox { Left = 320, Top = 80, Width = 150, DropDownStyle = ComboBoxStyle.DropDownList };
+            searchBtn = new Button { Left = 480, Top = 80, Width = 80, Text = "Search" };
             searchBtn.Click += async (s, e) => await LoadRecipesAsync();
 
+            // Data grid for displaying recipes
             grid = new DataGridView
             {
                 Left = 10,
-                Top = 40,
+                Top = 120,
                 Width = 650,
-                Height = 400,
+                Height = 320,
                 ReadOnly = true,
                 AllowUserToAddRows = false,
                 SelectionMode = DataGridViewSelectionMode.FullRowSelect,
@@ -58,13 +68,16 @@ namespace SmartMealPlanner.UI
             grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Tags", DataPropertyName = "Tags", Width = 250 });
             grid.DoubleClick += Grid_DoubleClick;
 
-            btnWelcome = new Button { Left = 570, Top = 10, Width = 80, Text = "Home" };
+            // Home button
+            btnWelcome = new Button { Left = 570, Top = 80, Width = 80, Text = "Home" };
             btnWelcome.Click += (s, e) => {
                 this.Hide();
                 this.Owner?.Show();
                 this.Close();
             };
 
+            // Add controls to the form
+            this.Controls.Add(lblInstructions);
             this.Controls.Add(searchBox);
             this.Controls.Add(filterCombo);
             this.Controls.Add(searchBtn);
@@ -72,6 +85,7 @@ namespace SmartMealPlanner.UI
             this.Controls.Add(btnWelcome);
         }
 
+        // Load recipes based on search and filter
         private async Task LoadRecipesAsync()
         {
             string keyword = searchBox.Text;
@@ -89,6 +103,7 @@ namespace SmartMealPlanner.UI
             }).ToList();
         }
 
+        // Load tags into the filter combo box
         private async void LoadTags()
         {
             var all = await _service.SearchAsync("");
@@ -99,10 +114,11 @@ namespace SmartMealPlanner.UI
             filterCombo.SelectedIndex = 0;
         }
 
+        // Handle double-click on a recipe to show details
         private void Grid_DoubleClick(object sender, EventArgs e)
         {
             if (grid.CurrentRow == null) return;
-            var id = grid.CurrentRow.Cells[0].Value?.ToString(); // Id is now column 0
+            var id = grid.CurrentRow.Cells[0].Value?.ToString();
             var recipe = _recipes.FirstOrDefault(r => r.Id == id);
             if (recipe != null)
             {
