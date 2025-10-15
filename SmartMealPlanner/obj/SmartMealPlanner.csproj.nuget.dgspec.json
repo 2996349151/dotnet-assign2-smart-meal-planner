@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj": {}
+    "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj": {}
   },
   "projects": {
-    "Y:\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj": {
+    "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj",
+        "projectUniqueName": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj",
         "projectName": "SmartMealPlanner",
-        "projectPath": "Y:\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj",
+        "projectPath": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\SmartMealPlanner.csproj",
         "packagesPath": "C:\\Users\\dengzhijian\\.nuget\\packages\\",
-        "outputPath": "Y:\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\obj\\",
+        "outputPath": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

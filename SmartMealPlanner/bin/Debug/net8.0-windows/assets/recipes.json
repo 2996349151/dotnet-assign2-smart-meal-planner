@@ -2,7 +2,7 @@
   {
     "Id": "r1",
     "Title": "Classic Omelette",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/classic_omelette.jpg",
     "Ingredients": {
       "Eggs": "2",
       "Milk": "0.1",
@@ -15,7 +15,7 @@
   {
     "Id": "r2",
     "Title": "Chicken Rice Bowl",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/chicken_rice_bowl.jpg",
     "Ingredients": {
       "Chicken Breast": "1",
       "Rice": "150",
@@ -28,7 +28,7 @@
   {
     "Id": "r3",
     "Title": "Vegetable Pasta",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/vegetable_pasta.jpg",
     "Ingredients": {
       "Pasta": "100",
       "Tomato": "2",
@@ -42,7 +42,7 @@
   {
     "Id": "r4",
     "Title": "Fruit Yogurt Parfait",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/fruit_yogurt_parfait.jpg",
     "Ingredients": {
       "Yogurt": "0.2",
       "Strawberry": "5",
@@ -56,7 +56,7 @@
   {
     "Id": "r5",
     "Title": "Grilled Salmon Salad",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/grilled_salmon_salad.jpg",
     "Ingredients": {
       "Salmon": "1",
       "Lettuce": "0.5",
@@ -70,7 +70,7 @@
   {
     "Id": "r6",
     "Title": "Beef Stew",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/beef_stew.jpg",
     "Ingredients": {
       "Beef": "0.5",
       "Potato": "2",
@@ -84,7 +84,7 @@
   {
     "Id": "r7",
     "Title": "Oatmeal Bowl",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/oatmeal_bowl.jpg",
     "Ingredients": {
       "Oats": "50",
       "Milk": "0.2",
@@ -98,7 +98,7 @@
   {
     "Id": "r8",
     "Title": "Tuna Sandwich",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/tuna_sandwich.jpg",
     "Ingredients": {
       "Tuna": "1",
       "Bread": "2",
@@ -112,7 +112,7 @@
   {
     "Id": "r9",
     "Title": "Vegetable Stir Fry",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/vegetable_stir_fry.jpg",
     "Ingredients": {
       "Broccoli": "1",
       "Carrot": "1",
@@ -126,7 +126,7 @@
   {
     "Id": "r10",
     "Title": "Egg Salad",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/egg_salad.jpg",
     "Ingredients": {
       "Eggs": "2",
       "Lettuce": "0.2",
@@ -140,7 +140,7 @@
   {
     "Id": "r11",
     "Title": "Chicken Wrap",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/chicken_wrap.jpg",
     "Ingredients": {
       "Chicken Breast": "1",
       "Lettuce": "0.2",
@@ -154,7 +154,7 @@
   {
     "Id": "r12",
     "Title": "Garlic Butter Mushrooms",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/garlic_butter_mushrooms.jpg",
     "Ingredients": {
       "Mushroom": "5",
       "Garlic": "1",
@@ -167,7 +167,7 @@
   {
     "Id": "r13",
     "Title": "Potato Corn Chowder",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/potato_corn_chowder.jpg",
     "Ingredients": {
       "Potato": "2",
       "Corn": "1",
@@ -181,7 +181,7 @@
   {
     "Id": "r14",
     "Title": "Spinach Cheese Omelette",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/spinach_cheese_omelette.jpg",
     "Ingredients": {
       "Eggs": "2",
       "Spinach": "0.2",
@@ -194,7 +194,7 @@
   {
     "Id": "r15",
     "Title": "Almond Banana Smoothie",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/almond_banana_smoothie.jpg",
     "Ingredients": {
       "Banana": "1",
       "Milk": "0.2",
@@ -208,7 +208,7 @@
   {
     "Id": "r16",
     "Title": "Walnut Apple Salad",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/walnut_apple_salad.jpg",
     "Ingredients": {
       "Apple": "1",
       "Walnuts": "10",
@@ -222,7 +222,7 @@
   {
     "Id": "r17",
     "Title": "Orange Strawberry Bowl",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/orange_strawberry_bowl.jpg",
     "Ingredients": {
       "Orange": "1",
       "Strawberry": "5",
@@ -235,7 +235,7 @@
   {
     "Id": "r18",
     "Title": "Broccoli Cheese Bake",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/broccoli_cheese_bake.jpg",
     "Ingredients": {
       "Broccoli": "1",
       "Cheese": "0.1",
@@ -249,7 +249,7 @@
   {
     "Id": "r19",
     "Title": "Carrot Pea Pilaf",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/carrot_pea_pilaf.jpg",
     "Ingredients": {
       "Rice": "100",
       "Carrot": "1",
@@ -263,7 +263,7 @@
   {
     "Id": "r20",
     "Title": "Tomato Cucumber Salad",
-    "ImageUrl": "",
+    "ImageUrl": "assets/recipePictures/tomato_cucumber_salad.jpg",
     "Ingredients": {
       "Tomato": "2",
       "Cucumber": "1",
