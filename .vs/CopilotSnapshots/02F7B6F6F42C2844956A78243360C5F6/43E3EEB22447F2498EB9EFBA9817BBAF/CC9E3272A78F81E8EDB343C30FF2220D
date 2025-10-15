@@ -1,7 +1,0 @@
-﻿namespace SmartMealPlanner.Core.Models;
-
-public sealed class Pantry
-{
-    // normalized name -> quantity (unitless base)
-    public Dictionary<string, double> Items { get; set; } = new Dictionary<string, double>();
-}
