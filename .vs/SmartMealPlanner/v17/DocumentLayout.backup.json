@@ -1,26 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{98FEAF6C-52B9-4898-B9A7-0D118A208342}|SmartMealPlanner\\SmartMealPlanner.csproj|\\\\mac\\icloud\\uts master\\2025 spring\\dotnet application development\\assignments\\2\\dotnet-assign2-smart-meal-planner\\smartmealplanner\\ui\\planner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FEAF6C-52B9-4898-B9A7-0D118A208342}|SmartMealPlanner\\SmartMealPlanner.csproj|\\\\mac\\icloud\\uts master\\2025 spring\\dotnet application development\\assignments\\2\\dotnet-assign2-smart-meal-planner\\smartmealplanner\\ui\\recipedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FEAF6C-52B9-4898-B9A7-0D118A208342}|SmartMealPlanner\\SmartMealPlanner.csproj|\\\\mac\\icloud\\uts master\\2025 spring\\dotnet application development\\assignments\\2\\dotnet-assign2-smart-meal-planner\\smartmealplanner\\src\\smartmealplanner.core\\services\\pantryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FEAF6C-52B9-4898-B9A7-0D118A208342}|SmartMealPlanner\\SmartMealPlanner.csproj|\\\\mac\\icloud\\uts master\\2025 spring\\dotnet application development\\assignments\\2\\dotnet-assign2-smart-meal-planner\\smartmealplanner\\ui\\recipesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FEAF6C-52B9-4898-B9A7-0D118A208342}|SmartMealPlanner\\SmartMealPlanner.csproj|\\\\mac\\icloud\\uts master\\2025 spring\\dotnet application development\\assignments\\2\\dotnet-assign2-smart-meal-planner\\smartmealplanner\\ui\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FEAF6C-52B9-4898-B9A7-0D118A208342}|SmartMealPlanner\\SmartMealPlanner.csproj|\\\\mac\\icloud\\uts master\\2025 spring\\dotnet application development\\assignments\\2\\dotnet-assign2-smart-meal-planner\\smartmealplanner\\ui\\ingredientsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -28,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,88 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "pantryService.cs",
-              "DocumentMoniker": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\src\\SmartMealPlanner.Core\\services\\pantryService.cs",
-              "RelativeDocumentMoniker": "SmartMealPlanner\\src\\SmartMealPlanner.Core\\services\\pantryService.cs",
-              "ToolTip": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\src\\SmartMealPlanner.Core\\services\\pantryService.cs",
-              "RelativeToolTip": "SmartMealPlanner\\src\\SmartMealPlanner.Core\\services\\pantryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T23:08:26.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "welcome.cs",
-              "DocumentMoniker": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\welcome.cs",
-              "RelativeDocumentMoniker": "SmartMealPlanner\\ui\\welcome.cs",
-              "ToolTip": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\welcome.cs",
-              "RelativeToolTip": "SmartMealPlanner\\ui\\welcome.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T22:51:34.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "recipeSearch.cs",
-              "DocumentMoniker": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\recipeSearch.cs",
-              "RelativeDocumentMoniker": "SmartMealPlanner\\ui\\recipeSearch.cs",
-              "ToolTip": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\recipeSearch.cs",
-              "RelativeToolTip": "SmartMealPlanner\\ui\\recipeSearch.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAgwHgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T22:51:31.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "recipeDetail.cs",
-              "DocumentMoniker": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\recipeDetail.cs",
-              "RelativeDocumentMoniker": "SmartMealPlanner\\ui\\recipeDetail.cs",
-              "ToolTip": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\recipeDetail.cs",
-              "RelativeToolTip": "SmartMealPlanner\\ui\\recipeDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T22:51:29.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "planner.cs",
-              "DocumentMoniker": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\planner.cs",
-              "RelativeDocumentMoniker": "SmartMealPlanner\\ui\\planner.cs",
-              "ToolTip": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\planner.cs",
-              "RelativeToolTip": "SmartMealPlanner\\ui\\planner.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAtwNIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T22:51:26.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ingredientsManagement.cs",
-              "DocumentMoniker": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\ingredientsManagement.cs",
-              "RelativeDocumentMoniker": "SmartMealPlanner\\ui\\ingredientsManagement.cs",
-              "ToolTip": "\\\\Mac\\iCloud\\UTS Master\\2025 Spring\\DotNet Application Development\\Assignments\\2\\dotnet-assign2-smart-meal-planner\\SmartMealPlanner\\ui\\ingredientsManagement.cs",
-              "RelativeToolTip": "SmartMealPlanner\\ui\\ingredientsManagement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T22:51:23.802Z",
-              "EditorCaption": ""
             }
           ]
         }
