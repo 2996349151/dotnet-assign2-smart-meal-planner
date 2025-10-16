@@ -1,96 +1,146 @@
 using SmartMealPlanner.Core.Interfaces;
 using SmartMealPlanner.Core.Models;
 
-namespace SmartMealPlanner.Core.Services;
-
-public sealed class RecipeService : IRecipeService
+namespace SmartMealPlanner.Core.Services
 {
-    private readonly IRecipeRepository _repo;
-
-    public RecipeService(IRecipeRepository repo) => _repo = repo;
-
-    public async Task<IReadOnlyList<Recipe>> SearchAsync(string keyword)
+    public sealed class RecipeService : IRecipeService
     {
-        var k = (keyword ?? "").Trim().ToLowerInvariant();
-        var all = await _repo.GetAllAsync();
-        if (string.IsNullOrEmpty(k)) return all;
-        return all
-            .Where(r =>
-                r.Title.ToLowerInvariant().Contains(k) ||
-                r.Tags.Any(t => t.ToLowerInvariant().Contains(k)) ||
-                r.Ingredients.Keys.Any(n => Normalize(n).Contains(k)))
-            .ToList();
-    }
+        private readonly IRecipeRepository _repo;
 
-    public Task<Recipe?> GetByIdAsync(string id) => _repo.GetByIdAsync(id);
-
-    public async Task<IReadOnlyList<Recipe>> GetRecommendationsAsync(Pantry pantry, UserPreference pref, int tolerance)
-    {
-        var all = await _repo.GetAllAsync();
-        var pmap = pantry.Items.ToDictionary(kv => Normalize(kv.Key), kv => kv.Value);
-        var tol = Math.Max(0, tolerance);
-
-        double CuisineWeight(Recipe r)
-            => r.Tags.Sum(t => pref.CuisineWeights.TryGetValue(t.ToLowerInvariant(), out var w) ? w : 0);
-
-        bool IsDisliked(Recipe r)
-            => r.Ingredients.Keys.Any(n => pref.Disliked.Contains(Normalize(n)));
-
-        bool DietOk(Recipe r)
-            => pref.DietTags.Count == 0 || r.Tags.Any(t => pref.DietTags.Contains(t.ToLowerInvariant()));
-
-        var accepted = new List<(Recipe recipe, int missing, double score)>();
-
-        foreach (var r in all)
+        public RecipeService(IRecipeRepository repo)
         {
-            int missing = 0;
-            double missingDeficit = 0;
-
-            foreach (var (name, qtyStr) in r.Ingredients)
-            {
-                var key = Normalize(name);
-                var need = ParseQty(qtyStr);
-                var have = pmap.TryGetValue(key, out var v) ? v : 0.0;
-
-                if (have + 1e-9 < need)
-                {
-                    missing++;
-                    missingDeficit += (need - have);
-                }
-            }
-
-            if (missing > tol) continue;
-
-            double score = 1.0;
-            score += CuisineWeight(r);
-            if (DietOk(r)) score += 0.3;
-            if (IsDisliked(r)) score -= 0.8;
-            score -= missing * 0.2;
-            score -= Math.Clamp(r.CookTimeMins / 120.0, 0, 1) * 0.3; // prefer quicker
-
-            // small tie-breaker by deficit
-            score -= Math.Min(missingDeficit / 10.0, 1.0) * 0.2;
-
-            accepted.Add((r, missing, score));
+            _repo = repo;
         }
 
-        return accepted
-            .OrderByDescending(x => x.score)
-            .ThenBy(x => x.recipe.CookTimeMins)
-            .Select(x => x.recipe)
-            .ToList();
-    }
+        // Search recipes by keyword in title, tags, or ingredients.
+        public async Task<IReadOnlyList<Recipe>> SearchAsync(string keyword)
+        {
+            var k = (keyword ?? "").Trim().ToLowerInvariant();
+            var all = await _repo.GetAllAsync();
+            if (string.IsNullOrEmpty(k)) return all.ToList();
 
-    private static string Normalize(string s) => (s ?? "").Trim().ToLowerInvariant();
+            return all
+                .Where(r =>
+                    r.Title.ToLowerInvariant().Contains(k) ||
+                    r.Tags.Any(t => t.ToLowerInvariant().Contains(k)) ||
+                    r.Ingredients.Keys.Any(n => Normalize(n).Contains(k)))
+                .ToList();
+        }
 
-    private static double ParseQty(string? s)
-    {
-        if (string.IsNullOrWhiteSpace(s)) return 0;
-        if (double.TryParse(s.Trim(), System.Globalization.NumberStyles.Float,
-            System.Globalization.CultureInfo.InvariantCulture, out var v)) return v;
-        // fallback: strip non-digits except dot
-        var filtered = new string((s.Where(ch => char.IsDigit(ch) || ch == '.' || ch == '-')).ToArray());
-        return double.TryParse(filtered, System.Globalization.NumberStyles.Float,
-            System.Globalization.CultureInfo.InvariantCulture, out v) ? v : 0;
+        public Task<Recipe> GetByIdAsync(string id)
+        {
+            return _repo.GetByIdAsync(id);
+        }
+
+        // Generate recipe recommendations based on pantry contents and user preferences.
+        public async Task<IReadOnlyList<Recipe>> GetRecommendationsAsync(Pantry pantry, UserPreference pref, int tolerance)
+        {
+            var all = await _repo.GetAllAsync();
+
+            // Remove recipes containing disliked ingredients.
+            if (pref.Disliked != null && pref.Disliked.Any())
+            {
+                all = all
+                    .Where(r => !r.Ingredients.Keys.Any(ing =>
+                        pref.Disliked.Contains(Normalize(ing))))
+                    .ToList();
+            }
+
+            // Convert pantry to dictionary
+            var pmap = new Dictionary<string, double>();
+            foreach (var kv in pantry.Items)
+                pmap[Normalize(kv.Key)] = kv.Value;
+
+            var tol = Math.Max(0, tolerance);
+
+            // Calculate cuisine weight score
+            double CuisineWeight(Recipe r)
+            {
+                double sum = 0;
+                foreach (var t in r.Tags)
+                {
+                    double w = 0;
+                    pref.CuisineWeights.TryGetValue(t.ToLowerInvariant(), out w);
+                    sum += w;
+                }
+                return sum;
+            }
+
+            // Check diet tag match
+            bool DietOk(Recipe r)
+            {
+                if (pref.DietTags.Count == 0) return true;
+                foreach (var t in r.Tags)
+                    if (pref.DietTags.Contains(t.ToLowerInvariant())) return true;
+                return false;
+            }
+
+            var accepted = new List<Tuple<Recipe, int, double>>();
+
+            foreach (var r in all)
+            {
+                int missing = 0;
+                double missingDeficit = 0;
+
+                // Count missing ingredients
+                foreach (var kvp in r.Ingredients)
+                {
+                    var name = kvp.Key;
+                    var qtyStr = kvp.Value;
+                    var key = Normalize(name);
+                    var need = ParseQty(qtyStr);
+                    var have = pmap.ContainsKey(key) ? pmap[key] : 0.0;
+
+                    if (have + 1e-9 < need)
+                    {
+                        missing++;
+                        missingDeficit += (need - have);
+                    }
+                }
+
+                if (missing > tol) continue;
+
+                // Compute recommendation score
+                double score = 1.0;
+                score += CuisineWeight(r);                     // weight by cuisine preference
+                if (DietOk(r)) score += 0.3;                   // bonus for matching diet tag
+                score -= missing * 0.2;                        // penalty for missing ingredients
+                score -= Math.Min(Math.Max(r.CookTimeMins / 120.0, 0), 1) * 0.3;  // penalty for long cooking time
+                score -= Math.Min(missingDeficit / 10.0, 1.0) * 0.2;              // penalty for ingredient shortage
+
+                accepted.Add(Tuple.Create(r, missing, score));
+            }
+
+            // Sort by descending score, then ascending cooking time
+            return accepted
+                .OrderByDescending(x => x.Item3)
+                .ThenBy(x => x.Item1.CookTimeMins)
+                .Select(x => x.Item1)
+                .ToList();
+        }
+
+        private static string Normalize(string s)
+        {
+            return (s ?? "").Trim().ToLowerInvariant();
+        }
+
+        // Convert quantity strings to numeric values.
+        private static double ParseQty(string s)
+        {
+            if (string.IsNullOrWhiteSpace(s)) return 0;
+            double v;
+            if (double.TryParse(s.Trim(), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out v))
+                return v;
+
+            var filtered = new string(s.ToCharArray()
+                .Where(ch => char.IsDigit(ch) || ch == '.' || ch == '-')
+                .ToArray());
+
+            return double.TryParse(filtered, System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out v)
+                ? v
+                : 0;
+        }
     }
 }
