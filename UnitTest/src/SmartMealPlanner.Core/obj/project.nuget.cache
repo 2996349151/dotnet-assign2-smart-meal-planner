@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "E+ZrS64D0xw=",
+  "success": true,
+  "projectFilePath": "/Users/dengzhijian/Library/Mobile Documents/com~apple~CloudDocs/UTS Master/2025 Spring/DotNet Application Development/Assignments/2/dotnet-assign2-smart-meal-planner/src/SmartMealPlanner.Core/SmartMealPlanner.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/dengzhijian/.nuget/packages/system.text.json/9.0.9/system.text.json.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

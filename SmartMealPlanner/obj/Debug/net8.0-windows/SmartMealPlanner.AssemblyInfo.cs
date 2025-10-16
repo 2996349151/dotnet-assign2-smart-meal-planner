@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartMealPlanner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37f207592bb51e5d9f9a97afc0f350ad63073230")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+711f7de325d48b09ec0fa9cce2744b956a885b2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartMealPlanner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartMealPlanner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
